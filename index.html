@@ -3,28 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DeltaSoft Cloud ERP</title>
+  <title>DeltaSoft Cloud ERP | Smart Business Solution</title>
+  <meta name="description" content="DeltaSoft Cloud ERP - Inventory, Sales, Accounts & Production system for Bangladesh businesses." />
+  <meta name="keywords" content="ERP Bangladesh, Cloud ERP, Inventory Software, Accounting Software" />
+  <meta name="author" content="DeltaSoft" />
+
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background: #f7f9fc;
     }
 
+    body {
+      background: #f4f6fb;
+      color: #1f2937;
+    }
+
+    /* NAVBAR */
     header {
       background: #0f172a;
       color: white;
-      padding: 20px 40px;
+      padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header h1 {
       font-size: 22px;
-      margin: 0;
     }
 
     nav a {
@@ -34,40 +45,53 @@
       font-size: 14px;
     }
 
+    /* HERO */
     .hero {
       background: linear-gradient(135deg, #1e3a8a, #0f172a);
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px;
     }
 
     .hero h2 {
-      font-size: 40px;
-      margin-bottom: 10px;
+      font-size: 42px;
+      margin-bottom: 15px;
     }
 
     .hero p {
       font-size: 18px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .btn {
       background: #22c55e;
       color: white;
-      padding: 12px 20px;
-      border: none;
+      padding: 12px 18px;
       border-radius: 5px;
       text-decoration: none;
-      display: inline-block;
       margin: 5px;
+      display: inline-block;
+      transition: 0.3s;
     }
 
+    .btn:hover {
+      background: #16a34a;
+    }
+
+    /* SECTIONS */
     section {
-      padding: 60px 40px;
+      padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
+    .title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    /* CARDS */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -77,14 +101,36 @@
     .card {
       background: white;
       padding: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 28px;
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* CONTACT FORM */
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 12px 15px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     footer {
@@ -95,9 +141,14 @@
       margin-top: 40px;
     }
 
-    .highlight {
-      color: #22c55e;
-      font-weight: bold;
+    /* ANIMATION */
+    .fade {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
@@ -113,7 +164,7 @@
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero fade">
   <h2>Cloud ERP for Bangladesh Businesses</h2>
   <p>Inventory | Sales | Accounts | Production — All in One System</p>
   <a href="#contact" class="btn">Book Free Demo</a>
@@ -121,29 +172,19 @@
 </section>
 
 <section id="features">
-  <h2 class="section-title">Why DeltaSoft ERP?</h2>
+  <h2 class="title">Why Choose DeltaSoft ERP?</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Real-time Dashboard</h3>
-      <p>Monitor sales, stock and profit instantly.</p>
-    </div>
-    <div class="card">
-      <h3>Inventory Control</h3>
-      <p>Track stock movement with accuracy.</p>
-    </div>
-    <div class="card">
-      <h3>Sales Automation</h3>
-      <p>Invoice, order & return management system.</p>
-    </div>
-    <div class="card">
-      <h3>Cloud Access</h3>
-      <p>Access your business anytime anywhere.</p>
-    </div>
+    <div class="card">Real-time Dashboard</div>
+    <div class="card">Inventory Control</div>
+    <div class="card">Sales Automation</div>
+    <div class="card">Accounts Integration</div>
+    <div class="card">Mobile Access</div>
+    <div class="card">Cloud Security</div>
   </div>
 </section>
 
 <section id="industries">
-  <h2 class="section-title">Industries We Serve</h2>
+  <h2 class="title">Industries</h2>
   <div class="grid">
     <div class="card">Pharma</div>
     <div class="card">Garments</div>
@@ -154,38 +195,48 @@
 </section>
 
 <section id="pricing">
-  <h2 class="section-title">Pricing Plans</h2>
+  <h2 class="title">Pricing</h2>
   <div class="grid">
     <div class="card">
       <h3>Starter</h3>
-      <p><span class="highlight">৳8,000</span> / month</p>
-      <p>5 Users</p>
+      <p>৳8,000 / month</p>
     </div>
     <div class="card">
       <h3>Business</h3>
-      <p><span class="highlight">৳18,000</span> / month</p>
-      <p>20 Users</p>
+      <p>৳18,000 / month</p>
     </div>
     <div class="card">
       <h3>Enterprise</h3>
-      <p>Custom Pricing</p>
-      <p>Unlimited Users</p>
+      <p>Custom</p>
     </div>
   </div>
 </section>
 
 <section id="contact">
-  <h2 class="section-title">Contact Us</h2>
+  <h2 class="title">Contact & Demo Request</h2>
+
   <div class="card">
-    <p><strong>Email:</strong> info@deltasoft.com</p>
-    <p><strong>Phone:</strong> +880XXXXXXXXX</p>
-    <p><strong>Website:</strong> www.deltasoft.com</p>
-    <a href="#" class="btn">Request Demo</a>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="text" placeholder="Company Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="4" placeholder="Message"></textarea>
+      <button class="btn" type="submit">Send Request</button>
+    </form>
+
+    <p style="margin-top:20px;">
+      Email: enamul_huq2000@yahoo.com <br/>
+      Phone: +8801718293744
+    </p>
   </div>
 </section>
 
+<a class="whatsapp" href="https://wa.me/8801718293744" target="_blank">
+  WhatsApp Us
+</a>
+
 <footer>
-  <p>&copy; 2026 DeltaSoft. All Rights Reserved.</p>
+  <p>© 2026 DeltaSoft. All Rights Reserved.</p>
 </footer>
 
 </body>
